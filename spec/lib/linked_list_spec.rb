@@ -18,7 +18,6 @@ describe Linked::List do
     end
   end
 
-
   describe '#append' do
     it 'should exist' do
       @empty_list.respond_to?(:append).should be true
@@ -140,7 +139,6 @@ describe Linked::List do
     end
   end
 
-
   describe '#contains?' do
     it 'should exist' do
       @empty_list.respond_to?(:contains?).should be true
@@ -198,7 +196,9 @@ describe Linked::List do
     end
 
     it 'should insert value at last index' do
-      @list.insert_at(5, 'data').to_a.should eq [1, 2, 3, 4, 5, 'data']
+      @list.insert_at(5, 'data')
+      @list.to_a.should eq [1, 2, 3, 4, 5, 'data']
+      @list.tail.should eq 'data'
     end
 
     it 'should insert value at any index' do
@@ -314,9 +314,5 @@ describe Linked::Node do
       node = Node.new 10
       node.to_s.should eq '( 10 )'
     end
-
-
   end
-
-
 end
