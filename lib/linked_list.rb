@@ -1,6 +1,6 @@
 module Linked
   class List
-    def initialize items=[]
+    def initialize(items=[])
       items.each { |item| self.append item }
     end
 
@@ -14,12 +14,12 @@ module Linked
       self.each.to_a
     end
 
-    def append value
+    def append(value)
       self.tail = value
       self
     end
 
-    def prepend value
+    def prepend(value)
       self.head = value
       self
     end
@@ -36,7 +36,7 @@ module Linked
       @tail.value unless @head === nil
     end
 
-    def at index
+    def at(index)
       self.each_node.with_index { |item, i| return item.value if i == index }
     end
 
@@ -52,11 +52,11 @@ module Linked
       tail.value
     end
 
-    def contains? *args
+    def contains?(*args)
       self.to_a.include? *args
     end
 
-    def find *args
+    def find(*args)
       self.each.find_index *args
     end
 
@@ -65,7 +65,7 @@ module Linked
       "#{self.nodes.join(' -> ')} -> nil"
     end
 
-    def insert_at index, value
+    def insert_at(index, value)
       return self.prepend value if index == 0
 
       self.each_node.with_index do |node, i|
@@ -79,7 +79,7 @@ module Linked
       self
     end
 
-    def remove_at index
+    def remove_at(index)
       (self.shift; return self) if index == 0
 
       self.each_node.with_index do |node, i|
@@ -87,7 +87,6 @@ module Linked
         (self.pop; return self) if node.next_node === @tail
 
         node.next_node = node.next_node.next_node
-
         break
       end
       self
@@ -114,13 +113,13 @@ module Linked
       head
     end
 
-    def head= value
+    def head=(value)
       @head = Node.new value, @head
       @tail = @head if @head.next_node === nil
       self
     end
 
-    def tail= value
+    def tail=(value)
       return self.head = value if @tail === nil
 
       @tail.next_node = Node.new value
@@ -131,7 +130,7 @@ module Linked
   class Node
     attr_accessor :value, :next_node
 
-    def initialize value=nil, next_node=nil
+    def initialize(value=nil, next_node=nil)
       @value = value
       @next_node = next_node
     end

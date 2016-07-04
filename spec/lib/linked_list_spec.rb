@@ -8,8 +8,8 @@ describe Linked::List do
     @list = List.new (1..5)
   end
 
-  describe "#initialize" do
-    it "should exist" do
+  describe '#initialize' do
+    it 'should exist' do
       @empty_list.should be_instance_of List
     end
     it 'should initialize with an optional list' do
@@ -19,8 +19,8 @@ describe Linked::List do
   end
 
 
-  describe "#append" do
-    it "should exist" do
+  describe '#append' do
+    it 'should exist' do
       @empty_list.respond_to?(:append).should be true
     end
 
@@ -38,8 +38,8 @@ describe Linked::List do
 
   end
 
-  describe "#prepend" do
-    it "should exist" do
+  describe '#prepend' do
+    it 'should exist' do
       @empty_list.respond_to?(:prepend).should be true
     end
 
@@ -57,8 +57,8 @@ describe Linked::List do
     end
   end
 
-  describe "#size" do
-    it "should exist" do
+  describe '#size' do
+    it 'should exist' do
       @empty_list.respond_to?(:size).should be true
     end
 
@@ -72,8 +72,8 @@ describe Linked::List do
     end
   end
 
-  describe "#head" do
-    it "should exist" do
+  describe '#head' do
+    it 'should exist' do
       @empty_list.respond_to?(:head).should be true
     end
 
@@ -82,8 +82,8 @@ describe Linked::List do
     end
   end
 
-  describe "#tail" do
-    it "should exist" do
+  describe '#tail' do
+    it 'should exist' do
       @empty_list.respond_to?(:tail).should be true
     end
     it 'should initially be nil' do
@@ -95,8 +95,8 @@ describe Linked::List do
     end
   end
 
-  describe "#at" do
-    it "should exist" do
+  describe '#at' do
+    it 'should exist' do
       @empty_list.respond_to?(:at).should be true
     end
 
@@ -111,8 +111,8 @@ describe Linked::List do
     end
   end
 
-  describe "#pop" do
-    it "should exist" do
+  describe '#pop' do
+    it 'should exist' do
       @empty_list.respond_to?(:pop).should be true
     end
 
@@ -141,8 +141,8 @@ describe Linked::List do
   end
 
 
-  describe "#contains?" do
-    it "should exist" do
+  describe '#contains?' do
+    it 'should exist' do
       @empty_list.respond_to?(:contains?).should be true
     end
 
@@ -159,8 +159,8 @@ describe Linked::List do
     end
   end
 
-  describe "#find" do
-    it "should exist" do
+  describe '#find' do
+    it 'should exist' do
       @empty_list.respond_to?(:find).should be true
     end
 
@@ -174,8 +174,8 @@ describe Linked::List do
     end
   end
 
-  describe "#to_s" do
-    it "should exist" do
+  describe '#to_s' do
+    it 'should exist' do
       @empty_list.respond_to?(:to_s).should be true
     end
     it 'should format values to a string' do
@@ -188,8 +188,8 @@ describe Linked::List do
     end
   end
 
-  describe "#insert_at" do
-    it "should exist" do
+  describe '#insert_at' do
+    it 'should exist' do
       @empty_list.respond_to?(:insert_at).should be true
     end
 
@@ -214,8 +214,8 @@ describe Linked::List do
     end
   end
 
-  describe "#remove_at" do
-    it "should exist" do
+  describe '#remove_at' do
+    it 'should exist' do
       @empty_list.respond_to?(:remove_at).should be true
     end
 
@@ -253,8 +253,8 @@ describe Linked::List do
     end
   end
 
-  describe "#each" do
-    it "should exist" do
+  describe '#each' do
+    it 'should exist' do
       @empty_list.respond_to?(:each).should be true
     end
 
@@ -281,8 +281,8 @@ describe Linked::List do
     end
   end
 
-  describe "#to_a" do
-    it "should exist" do
+  describe '#to_a' do
+    it 'should exist' do
       @empty_list.respond_to?(:to_a).should be true
     end
 
