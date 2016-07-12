@@ -137,6 +137,10 @@ describe Linked::List do
       list.head.should be_nil
       list.tail.should be_nil
     end
+
+    it "should be nil on an empty list" do
+      @empty_list.pop.should be_nil
+    end
   end
 
   describe '#contains?' do
